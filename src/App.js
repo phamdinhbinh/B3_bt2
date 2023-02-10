@@ -5,18 +5,17 @@ import { useState } from 'react';
 import styles from "./styles.module.css"; 
 
 function App() {
-  const [setDays, setSetDays] = useState('day');
-  const handleClickDay = () => {
-    setSetDays('day')
+  const [Days, setDays] = useState('day');
+  const handleClick = (event) => {
+    setDays(event.target.value)
+   console.log(Days)
   };
-  const handleClickNight = () => {
-    setSetDays('night')
-  };
-  const style = (setDays=== 'day' ) ? styles.Day : styles.Night ;
+ 
+  const style = (Days=== 'day' ) ? styles.Day : styles.Night ;
   return (
     <div>
-       <button onClick={handleClickDay} value={'day'}>day</button>
-       <button onClick={handleClickNight} value={'night'}>night</button>
+       <button onClick={handleClick} value={'day'}>day</button>
+       <button onClick={handleClick} value={'night'}>night</button>
       
       <div className={style}>
        
@@ -25,5 +24,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
