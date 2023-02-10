@@ -1,0 +1,11 @@
+.Day{
+    height: 200px;
+    width: 80px;
+    background-color: rgb(17, 1, 243);
+    
+  }
+  .Night {
+    height: 200px;
+    width: 80px;
+    background-color: #000000;
+  }
